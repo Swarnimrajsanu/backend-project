@@ -25,4 +25,4 @@ const uplodOnCloudinary = async(localFilepath) => {
 
 
 
-export default uplodOnCloudinary;
+export { uplodOnCloudinary };
