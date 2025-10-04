@@ -69,7 +69,7 @@ userSchema.methods.generatAccessToken = function() {
     );
 }
 
-userSchema.methods.generatAccessToken = function() {
+userSchema.methods.generatRefreshToken = function() {
     return JsonWebTokenError.sign({
             id: this._id,
         },
