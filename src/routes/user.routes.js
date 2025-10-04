@@ -1,6 +1,6 @@
 import { Router } from "express";
 import jsonwebtoken from 'jsonwebtoken';
-import { loginUser, logoutUser, registerUser } from "../controllers/user.controller.js";
+import { loginUser, logoutUser, refreshaAccessToken, registerUser } from "../controllers/user.controller.js";
 import { upload } from "../middlewares/multer.middleware.js";
 const { verify } = jsonwebtoken;
 
@@ -19,6 +19,7 @@ router.route("/login").post(loginUser);
 //secure routes
 
 router.route("/logout").post(verifyJWT, logoutUser)
+router.route("/refresh-token").post(refreshaAccessToken)
 
 
 export default router;
