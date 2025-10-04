@@ -1,7 +1,9 @@
 import { Router } from "express";
+import jsonwebtoken from 'jsonwebtoken';
 import { loginUser, logoutUser, registerUser } from "../controllers/user.controller.js";
 import { upload } from "../middlewares/multer.middleware.js";
-import { verify } from "jsonwebtoken";
+const { verify } = jsonwebtoken;
+
 import { verifyJWT } from "../middlewares/auth.middleware.js";
 
 
